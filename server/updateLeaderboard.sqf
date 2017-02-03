@@ -1,5 +1,5 @@
 //get stats
-GOGSTATS = profileNameSpace getVariable "mcd_gameofguns_stats";
+GOGSTATS = profileNameSpace getVariable "mcd_gameofguns_stats_1944";
 if (isNil "GOGSTATS") exitWith {diag_log "updateLeaderboard.sqf - ERROR: STATS NOT FOUND IN SERVER PROFILENAMESPACE."};
 
 //UPDATE STATS =================================================================
