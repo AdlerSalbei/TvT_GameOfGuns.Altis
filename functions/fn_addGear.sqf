@@ -1,9 +1,9 @@
 if (!hasInterface) exitWith {};
 
-_gear = player getVariable ["myUniform", ["U_NikosAgedBody", "V_PlateCarrier1_rgr"]];
+_gear = player getVariable ["myUniform", ['U_LIB_GER_Recruit', 'V_LIB_GER_VestKar98']];
 _uniform = _gear select 0;
-/*_vest = _gear select 1;*/
-_vest = if (ISWOODLAND) then {"V_TacVest_oli"} else {"V_TacVest_khk"};
+_vest = _gear select 1;
+//_vest = if (ISWOODLAND) then {"V_TacVest_oli"} else {"V_TacVest_khk"};
 
 this = player;
 
@@ -27,11 +27,10 @@ for "_i" from 1 to 4 do {this addItemToUniform "ACE_morphine";};
 this addVest _vest;
 
 comment "Add weapons";
-this addWeapon "Binocular";
+this addWeapon (selectRandom ["LIB_Binocular_GER","LIB_Binocular_US","LIB_Binocular_SU"];
 
 comment "Add items";
 this linkItem "ItemMap";
 this linkItem "ItemCompass";
 this linkItem "ItemWatch";
-this linkItem "tf_anprc152";
-this linkItem "ItemGPS";
+
